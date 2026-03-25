@@ -15,7 +15,13 @@ function toggleNav() {
 }
 
 // Time spent tracking
-const startTime = Date.now();
+let startTime = sessionStorage.getItem("siteStartTime");
+if (!startTime) {
+  startTime = Date.now();
+  sessionStorage.setItem("siteStartTime", startTime);
+} else {
+  startTime = parseInt(startTime, 10);
+}
 
 function updateTimeSpent() {
   const now = Date.now();
