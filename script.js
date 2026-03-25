@@ -13,3 +13,30 @@ function toggleNav() {
     navOpen = false;
   }
 }
+
+// Time spent tracking
+const startTime = Date.now();
+
+function updateTimeSpent() {
+  const now = Date.now();
+  const diffInSeconds = Math.floor((now - startTime) / 1000);
+
+  const hours = Math.floor(diffInSeconds / 3600);
+  const minutes = Math.floor((diffInSeconds % 3600) / 60);
+  const seconds = diffInSeconds % 60;
+
+  const formattedTime =
+    String(hours).padStart(2, "0") +
+    ":" +
+    String(minutes).padStart(2, "0") +
+    ":" +
+    String(seconds).padStart(2, "0");
+
+  const displayElement = document.getElementById("time-spent-display");
+  if (displayElement) {
+    displayElement.textContent = formattedTime;
+  }
+}
+
+// Update the timer every second
+setInterval(updateTimeSpent, 1000);

@@ -64,7 +64,8 @@ h1 {
 }
 
 /* Projects Section */
-#projects {
+#projects,
+#analytics {
   margin-top: 40px;
 }
 
