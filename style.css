@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #000000, #1a0b2e, #001133);
+  color: #f1f5f9;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  font-size: 28px;
+  cursor: pointer;
+  padding: 15px 20px;
+  position: fixed;
+  z-index: 100;
+  color: #fff;
+  background: transparent;
+  border: none;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  background-color: rgba(10, 5, 25, 0.95);
+  backdrop-filter: blur(5px);
+  overflow-x: hidden;
+  transition: 0.4s;
+  padding-top: 70px;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.7);
+  border-right: 1px solid #3b0764;
+}
+
+.sidebar a {
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #cbd5e1;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #fff;
+  background-color: #3b0764;
+  border-left: 4px solid #8b5cf6;
+}
+
+/* Main Content */
+.main-content {
+  transition: margin-left 0.4s;
+  padding: 40px;
+  padding-top: 80px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #e2e8f0;
+}
+
+/* Projects Section */
+#projects {
+  margin-top: 40px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.project-card {
+  background: linear-gradient(145deg, #2e1065, #0f172a);
+  border: 1px solid #4c1d95;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.6);
+  border-color: #8b5cf6;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #a78bfa;
+}
+
+.project-card p {
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #1e1b4b;
+  color: #c4b5fd;
+  margin-top: 10px;
+}
