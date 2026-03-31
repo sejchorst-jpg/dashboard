@@ -114,3 +114,8 @@ h1 {
   color: #c4b5fd;
   margin-top: 10px;
 }
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+}
